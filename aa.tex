@@ -49,7 +49,7 @@ A prime is \textit{regular} if \(p \nmid h \), where \(h\) denotes the class num
 It can be shown that if \(p \nmid x,y,z \), then there are no solutions given that \(\ZZ[\zeta]\) is a unique factorization domain which implies that \(x+y\zeta \) has the form \(u\alpha^p\) for some \( \alpha \in \ZZ[\zeta]\)
 \input{C1}
 
-\subsection{Number Fields and Number Rings}
+\section{Number Fields and Number Rings}
 \begin{definition}
 A \textit{number field} is a subfield of \(\CC\) having finite degree (dimension as a vector space) over \(\QQ\). We refer to \(Q[\zeta]\), \(Q[\sqrt{m}]\) as cyclotomic fields, and quadratic fields, with the latter having a subdistinction of real versus imaginary.
 \end{definition}
@@ -82,4 +82,21 @@ Additionally, we define the discriminant of an \(n\)-tuple as \(\disc(\alpha_1, 
 This has some nice properties which include that if the argument are all algebraic integers, then it is an integer, and if the determinant is nonzero, then the arguments are linearly independent over the rationals.
 
 \import{}{C2.tex}
+\section{Prime Decomposition in Number Rings}
+\begin{definition}
+A \textit{Dedekind domain} is an integral domain \(R\) such that
+\begin{enumerate}[label=(\alph*)]
+    \item \(R\) is Noetherian. This is equivalent to every ideal being finitely generated, every increasing sequence of ideals is eventually constant, or every non-empty set \(S\) of ideals has a maximal member (\(\exists M \in S\) such that \(M \subset I \in S \implies M=I\).
+    \item Every nonzero prime ideal is a maximal ideal;
+    \item \(R\) is integrally closed in its field of fractions \(K = \{ \alpha/\beta : \alpha, \beta \in R, \beta \neq 0 \}\).
+\end{enumerate}
+\end{definition}
+\begin{theorem}
+Every number ring is a Dedekind domain
+\end{theorem}
+\begin{proof}
+Every number ring, \(R\), as well as its ideals, with number field \(K\) is a free abelian group of finite rank, implying the first condition. For the second condition, we need only prove that \(R/I\) is finite (in the case of \(I\) prime, this gives a finite field, implying maximality). Let \(\alpha \in I\), then \(N(\alpha) \in \ZZ, \ m=\alpha\beta \implies \beta = \frac{m}{\alpha} \in K\). Furthermore, it can be shown that \(\beta \in \AA\). Since \(R/(m)\) is finite, so is \(R/I\). Finally observe that if \(\alpha/\beta\) is a root of a monic polynomial over \(R\), then it is an algebraic integer. Thus \(\alpha/\beta \in K \cap \AA = R\). \( a \ast b\) 
+
+\end{proof}
+\import{}{C3.tex}
 \end{document}

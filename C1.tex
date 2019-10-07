@@ -26,5 +26,16 @@ Show that \(\ZZ[\zeta_3]\) is yet another UFD.
 Observe that in this case, we define the norm in the prototypical way, the product of the images of the number in all of the different embeddings, thus \(N(a+b\zeta_3)=(a+b\zeta_3)(a+b\zeta_3^2)\). By a similar argument, we can reduce our lattice on \(\mathbb{C}\) into a parallelogram whose vertices are \(a, a\zeta_3, 0, a+a\zeta_3\), and so the point \(b\) which we assumed was not on the lattice will fall either in a place whose norm is less than that of \(a\), which contradicts the normality, or, we can translate it into a region (which is opposite the original), which has it in an area where the norm is less than that of \(a\). Thus \(\ZZ[\zeta_3]\) is also a UFD. (A side note is that when \(a \in \ZZ[\zeta_3]\) is written as a sum of real and imaginary components, the norm is the sum of the square of each ones magnitude.
 
 \begin{problem}
-a
+Let \(x,y,z\) be a solution to \(x^4+y^4=w^2\) with smallest possible \(w\). Then \(x^2,y^2,w\) is a primitive Pythagorean triple. Assuming that \(x\) is odd, we can write \(x^2 = m^2-n^2, \ y^2 =2mn, \ w=m^2+n^2\) with \(m,n\) being relatively prime positive.
+\begin{enumerate}[label=(\alph*)]
+    \item Show that \(x = r^2-s^2, \ n=2rs, \ m=r^2+s^2 \) with \(r,s\) relatively prime integers.
+\end{enumerate}
+\end{problem}
+Since \(x^2+n^2=m^2\) we can write \(x\) as \(x=r^2-s^2\), with \(r,s\) relatively prime, of different parity. Without loss of generality, suppose \(r,m\) are not relatively prime, then we must have that \(s\) shares the same factor, a contradiction. Evidently \(y^2=4rsm\) must be a product of squares, so \(r,s,m\) is \(a^2,b^2,c^2\). We use the fact that \(m=r^2+s^2\) to conclude the that the minimality of \(w\) is false.
+\begin{problem}
+Suppose that \(\ZZ[\omega]\) is a UFD and \(\pi | x+y\omega\). Show that \(\pi\) does not divide any of the other factors on the left side of \((x+y)(x+y\omega)\cdots (x+y\omega^{p-1}=z^p\). Furthermore show that \(x+y\omega = u \alpha^p\), where \(u\) is a unit.
+\end{problem}
+Suppose \(\pi\) is an irreducible, \(\pi | x+y\omega, \ x+y\omega^k \implies \pi | y\omega-y\omega^k\). Then, since \(yp = y(1-\omega)(1-\omega^2) \dots \implies \pi | yp, z\). However, by the assumption that \(p \nmid y,z \implies \gcd(z,yp)=1\), this cannot be. Since it's not true in the case of irreducibles, it cannot be true in the case of reducibles. Evidently, the right hand side is a product of irreducibles raised to some \(p\)th power, and the right hand side has the property that if \(\pi | x+y\omega\) then \(\pi \nmid x+y\omega^k\), so \(\pi\) must be something to the \(p\)th power. As you consider all divisors of \(x+y\omega\), we get that this is always true. Of course, this is only true up to units, from which the conclusion follows naturally.
+\begin{problem}
+Dropping the assumption that \(\ZZ[\omega]\) is a UFD, show that the principal ideal \((x+y\omega)\) has no prime ideal factor with any others in the equation \((x+y)(x+y\omega)\cdots (x+y\omega^{p-1} = (z)^p\), and similarly to the previous one, that \((x+y\omega)=I^p\).
 \end{problem}
