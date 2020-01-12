@@ -3,3 +3,52 @@ Let \(K\) be a number field of degree \(n\) over \(\QQ\). Prove that every nonze
 \end{problem}
 We can choose a basis of \(R\) and so, we represent \(\alpha\) as \(c_1b_1+c_2b_2+ \dots\). The product, \(\alpha R\) is going to be \(c_1b_1R+c_2b_2R+\dots\). For each \(c_ib_iR\), we know that \(b_i\) is going to permute the basis and a multiple of it, and \(c_i\) acts obviously on it. So in general, we're going to have \(\alpha R = (k_{11}\ZZ,k_{12}\ZZ,\dots) + (k_{21}\ZZ,k_{22}\ZZ)\dots\). However, we have that \(a\ZZ+b\ZZ = \gcd(a,b)\ZZ \cong \ZZ\), so we have that \(\alpha R\) is going to be a rank \(n)\) free abelian group provided that \(\alpha\) is nonzero, and \(R\) is also a rank \(n\) free abelian group. Finally, observe that \(\alpha R \subset I \subset R\) whenever \(\alpha \in I\), which gives us the result.
 
+\begin{problem}
+Show that if \(I\) and \(J\) are ideals in a commutative ring such that \(1 \in I+J\), then \(1 \in I^m+J^n\) for all \(m,n\).
+\end{problem}
+Suppose that \(1=\alpha+\beta, \ \alpha \in I, \ \beta \in J\). Then we have that \(1^{mn}=\alpha^{mn}+\dbinom{mn}\alpha^{nm-1}\beta+ \dots + \beta^{mn}\). All we need to prove is that all of these elements are going to be in \(I^m+J^n\), but this is easy enough, as \(\alpha^m \cdot k \in I^m\), and we can more or less fudge these numbers around more.
+
+\begin{problem}
+\begin{enumerate}[label=(\alph*)]
+    \item Verify that \(5S=(5,\alpha+2)(5,\alpha^2+3\alpha-1)\) in the ring \(S=\ZZ[\sqrt[3]{2}], \ \alpha=\sqrt[3]{2}\).
+    \item Show that there is a ring-isomorphism \[ \ZZ/(5,x^2+3x-1) \to \ZZ_5[x]/(x^2+3x-1)\]
+    \item Show that there is a ring-homomorphism from \[\ZZ[x]/(5,x^2+3x-1) \ \textrm{onto} \ S/(5,\alpha^2+3\alpha-1)\].
+    \item Conclude that either \(S/5,\alpha^2+3\alpha-1)\) is a field of order \(25\) or else \((5,\alpha^2+3\alpha-1) = S\).
+    \item Show that \((5,\alpha^2+3\alpha-1) \neq S\) by considering (a).
+\end{enumerate}
+\end{problem}
+For the first part, we observe that both are fields of order \(25\), and hence are isomorphic. For the second part, we observe \(S\) is isomorphic to \(\ZZ[x]/(x^3-2)\), and that the natural ring-homomorphism is going to be \(\ZZ[x] \to \ZZ[x]/(x^3-2)\). For the final part, we observe that the gcd of \(x^3-2\) with \(x^2+3x-1\) is \(10x-5\), which due to the generator \(5\) is going to also be \(0\), so this is the same as it was before, and hence a field of order \(25\).
+\begin{problem}
+\begin{enumerate}[label=(\alph*)]
+    \item Let \(S = \ZZ[\alpha], \alpha^3=\alpha+1\). Verify that \(23S=(23,\alpha-10)^2(23,\alpha-3)\).
+    \item Show that \(23,\alpha-10,\alpha-3=S\); conclude that \(23, \alpha-10\) and \(23,\alpha-3\) are relatively prime ideals.
+\end{enumerate}
+\end{problem}
+In order to reduce computation, we want to show that \((23,\alpha-3)\)
+FINISH THIS PART UP
+
+
+
+\begin{problem}
+Let \(A\) be an additive subgroup of \(L\). Define \[ A^{-1} = \{\alpha \in L \ : \ \alpha A \subset S\} \\ A^{\ast} = \{\alpha \in L \ : \ T_K^L(\alpha A) \subset R\}\]
+\begin{enumerate}[label=(\alph*)]
+    \item We can consider \(L\) as an \(R\)-module, and also as an \(S\)-module. Show that \(A^{-1}\) is an \(S\)-submodule of \(L\) and \(A^{\ast}\) is an \(R\)-submodule. Also show \(A^{-1} \subset A^{\ast}\).
+    \item Show that \(A\) is a fractional ideal iff \(SA = A\) and \(A^{-1} \neq \{0\}\).
+    \item Define the \textit{different} \(\diff A\) to be \(\left(A^{\ast}\right)^{-1}\). Prove the following sequence of statements, in which \(A\) and \(B\) represent subgroups of \(L\) and \(I\) is a fractional ideal:
+    \begin{align*}
+    & A \subset B \implies A^{-1} \subset B^{-1}, A^{\ast} \supset B^{-1} \\
+    & \diff A \subset \\ & \left(A^{-1}\right)^{-1} \\
+    & \left(I^{-1}\right)^{-1} = I \\
+    & \diff I \subset I \\ 
+    & \diff I \ \textrm{is a fractional ideal} \\
+    & A \subset I \implies \diff A \  \textrm{is a fractional ideal} \\
+    & I^{\ast} \ \textrm{is an }S\textrm{-submodule of} \ L \\
+    & I^{\ast} \subset (\diff I)^{-1} \\
+    & II^{\ast} \subset S^{\ast} \ \textrm{and} \ I^{-1}S^{\ast} \subset I^{\ast} \\
+    & II^{\ast} =S^{\ast} \\
+    & I^{\ast}\left(I^{\ast}\right)^{\ast}=S^{\ast} \\
+    & \left(I^{\ast}\right)^{\ast} = I \\
+    & \diff I = I \diff S
+    \end{align*}
+\end{enumerate}
+\end{problem}
